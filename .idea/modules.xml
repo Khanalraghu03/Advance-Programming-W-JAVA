@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chapter14/Chapter14.iml" filepath="$PROJECT_DIR$/Chapter14/Chapter14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter15/Chapter15.iml" filepath="$PROJECT_DIR$/Chapter15/Chapter15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter16/Chapter16.iml" filepath="$PROJECT_DIR$/Chapter16/Chapter16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter17/Chapter17.iml" filepath="$PROJECT_DIR$/Chapter17/Chapter17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter21/Chapter21.iml" filepath="$PROJECT_DIR$/Chapter21/Chapter21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter25/Chapter25.iml" filepath="$PROJECT_DIR$/Chapter25/Chapter25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter32/Chapter32.iml" filepath="$PROJECT_DIR$/Chapter32/Chapter32.iml" />
       <module fileurl="file://$PROJECT_DIR$/ITEC3150.iml" filepath="$PROJECT_DIR$/ITEC3150.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MidTerm/MidTerm.iml" filepath="$PROJECT_DIR$/MidTerm/MidTerm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Review/Review.iml" filepath="$PROJECT_DIR$/Review/Review.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Scratch/Scratch.iml" filepath="$PROJECT_DIR$/Scratch/Scratch.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,14 @@
+Peter, Griffin, 01/03/1962, Family Guy
+Lois, Griffin, 12/23/1964, Family Guy
+Stewie, Griffin, 06/13/1991, Family Guy
+Brian, Griffin, 07/07/1984, Family Guy
+Meg, Griffin, 02/28/1989, Family Guy
+Carol, Brady, 08/04/1952, Brady Bunch
+Mike, Brady, 01/01/1948, Brady Bunch
+Greg, Brady, 01/31/1968, Brady Bunch
+Marcia, Brady, 03/01/1969, Brady Bunch
+Peter, Brady, 05/01/1970, Brady Bunch
+Jan, Brady, 09/01/1971, Brady Bunch
+Cindy, Brady, 04/01/1975, Brady Bunch
+Alice, Nelson, 08/01/1945, Brady Bunch
+Tiger, Brady, 04/01/1976, Brady Bunch
