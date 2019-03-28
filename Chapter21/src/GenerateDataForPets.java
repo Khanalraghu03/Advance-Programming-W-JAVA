@@ -20,7 +20,7 @@ import java.util.TreeSet;
  * hash set and tree set.
  *
  */
-public class GenerateDataForPets extends Application
+public class GenerateDataForPets
 {
 	private String nameCat = "Snoot";
 	private String nameDog = "Rover";
@@ -81,7 +81,7 @@ public class GenerateDataForPets extends Application
 		System.out.println(gdfp.pts);
 		try
 		{
-			pw = new PrintWriter("Pets.txt");
+			pw = new PrintWriter("./Chapter21/src/Pets.txt");
 			for (Pet p:gdfp.pal)
 			{
 				if (p instanceof Cat)
@@ -106,8 +106,4 @@ public class GenerateDataForPets extends Application
 		finally {pw.close();}
 	}
 
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-
-	}
 }

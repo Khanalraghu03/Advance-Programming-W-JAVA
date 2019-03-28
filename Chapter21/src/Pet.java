@@ -180,6 +180,7 @@ public class Pet implements Comparable<Pet>
 	@Override
 	public int hashCode()
 	{
+		//if the two objects are equal, their hashcode should be the same
 		return (Math.abs(this.name.hashCode() + this.weight +
 				this.color.hashCode()) % 13);
 	}
@@ -190,6 +191,7 @@ public class Pet implements Comparable<Pet>
 	@Override
 	public boolean equals(Object obj)
 	{
+		//Make object with same attributes return true
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -223,10 +225,10 @@ public class Pet implements Comparable<Pet>
 	}
 
 	// Create static method to count total weight of all pets
-	//static methods go last
+		//static methods go last
 	public static int getTotalWeight(ArrayList<Pet> p1)
 	{
-		int total =0;
+		int total = 0;
 		for (Pet p : p1)
 		{
 			total += p.weight;

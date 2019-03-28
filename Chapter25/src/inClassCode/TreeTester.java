@@ -16,7 +16,7 @@ public class TreeTester
         t.add("E");
         t.add("I");
         t.add("G");
-        t.add("H");
+        t.add("HH");
         t.add("J");
         t.print();
         t.remove("A"); // Removing leaf

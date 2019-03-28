@@ -1,3 +1,5 @@
+package inClassCode.fabColorsTONamesMap;
+
 import java.awt.Color;
 import java.util.HashMap;
 import java.util.TreeMap;

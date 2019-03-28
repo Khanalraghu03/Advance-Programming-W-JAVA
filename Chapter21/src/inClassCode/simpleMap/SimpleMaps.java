@@ -1,9 +1,10 @@
+package inClassCode.simpleMap;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.*;
-
 import javafx.scene.paint.Color;
+
 
 public class SimpleMaps {
 

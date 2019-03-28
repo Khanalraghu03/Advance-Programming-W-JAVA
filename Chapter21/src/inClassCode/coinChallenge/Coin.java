@@ -1,3 +1,5 @@
+package inClassCode.coinChallenge;
+
 /**
    A coin with a monetary value.
 */

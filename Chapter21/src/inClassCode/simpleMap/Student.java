@@ -1,3 +1,4 @@
+package inClassCode.simpleMap;
 
 public class Student implements Comparable<Student> {
 	private String name;
