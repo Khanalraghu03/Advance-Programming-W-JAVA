@@ -1,12 +1,24 @@
+/**
+ * @author: Raghu Khanal
+ * @assign #: 6
+ * @date: 04/08/2019
+ * @course number: ITEC 3150
+ * @version 1.0
+ * This class is adds all the mapped pets into a table and provides
+ *  an interface for user to select various colors that divides the
+ *  group of pets. Whatever color the user selects, the table text will
+ *  be colored by it.
+ */
+
 import javafx.application.Application;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -16,16 +28,26 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class PetFavoriteColor extends Application{
-    TableView table = new TableView();
-    ObservableList<Pet> data;
+    private TableView table = new TableView();
+    private ObservableList<Pet> data;
+    private Color[] colors = { Color.BLACK, Color.BLUE,
+            Color.CYAN, Color.DARK_GRAY, Color.GRAY,
+            Color.GREEN,Color.LIGHT_GRAY, Color.MAGENTA,
+            Color.ORANGE, Color.PINK, Color.RED,
+            Color.WHITE, Color.YELLOW };
+    private ArrayList<Pet> pets = getPets();
+    private Map<Color, HashSet<Pet>> m = getMap(colors, pets);
+    private String textColor = "";
 
     public static void main(String[] args) {
             launch(args);
     }
 
+
     public Map<Color, HashSet<Pet>> getMap(Color[] colors, ArrayList<Pet> pets) {
         Map<Color, HashSet<Pet>> m = new HashMap<Color, HashSet<Pet>>();
 
+        //for a key in keys: put a pet(value) into the set
         for(Color color: colors) {
             m.put(color, new HashSet<Pet>());
         }
@@ -34,11 +56,10 @@ public class PetFavoriteColor extends Application{
             Color favorite = colors[p.hashCode()]; //fav color
             m.get(favorite).add(p);
         }
-
         return m;
     }
 
-    String type1;
+
     public ArrayList<Pet> getPets() {
         File file = new File("./Chapter21/src/Pets.txt");
 
@@ -57,11 +78,6 @@ public class PetFavoriteColor extends Application{
                 int weight = Integer.parseInt(lineVal[5]);
                 int numOfToys = Integer.parseInt(lineVal[6]);
                 String type = lineVal[7];
-                type1 = catORdog;
-
-//                System.out.println(name + " " + breed + " " + color + " " +
-//                        legs + " " + weight + " " +
-//                        numOfToys + " " + type);
 
                 if(catORdog.equalsIgnoreCase("Cat")) {
                     if(type.equalsIgnoreCase("SCOOPABLE")){
@@ -79,7 +95,7 @@ public class PetFavoriteColor extends Application{
                     }
 
                 }
-                else {
+                if(catORdog.equalsIgnoreCase("Dog")) {
                     if(type.equalsIgnoreCase("BOBBED")){
                         Dog dog = new Dog(name, breed,color, legs, weight,numOfToys,true,"", TailType.BOBBED);
                         pets.add(dog);
@@ -113,7 +129,7 @@ public class PetFavoriteColor extends Application{
     public void setUpTableColumn(TableView table) {
         TableColumn<Pet, String> nameCol = new TableColumn<>("Name");
         nameCol.setCellValueFactory(
-                new PropertyValueFactory("name"));
+                new PropertyValueFactory<>("name"));
 
         TableColumn<Pet, String> breedCol = new TableColumn<>("Breed");
         breedCol.setCellValueFactory(
@@ -134,23 +150,32 @@ public class PetFavoriteColor extends Application{
         notCol.setCellValueFactory(
                 new PropertyValueFactory<>("numberOfToys"));
 
-
         TableColumn<Pet, String> typeCol = new TableColumn<>("Type");
+        typeCol.setCellValueFactory(param -> {
+            String val = "";
+            Pet p = param.getValue();
+            if(p instanceof Cat) {
+                val =  ((Cat) p).getLitterType().toString();
+            } else {
+                val =  ((Dog) p).getTail().toString();
+            }
 
-        typeCol.setCellValueFactory(
-                new PropertyValueFactory<>("litterType"));
+            return new ReadOnlyObjectWrapper<>(val);
+        });
 
-        typeCol.setCellValueFactory(
-                new PropertyValueFactory<>("tail"));
+        table.getColumns().clear();
 
         table.getColumns().addAll(nameCol, breedCol, colorCol,
-                legsCol, weightCol, notCol,typeCol);
+                legsCol, weightCol, notCol, typeCol);
 
+        for(int i = 0; i < table.getColumns().size(); i++) {
+            ((TableColumn) table.getColumns().get(i)).setStyle("-fx-text-fill: " + textColor);
+        }
     }
-
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        //Create buttons and color the buttons
         Button blackBtn = new Button();
         blackBtn.setStyle("-fx-font: 30 arial; -fx-base: #000000;");
 
@@ -191,11 +216,13 @@ public class PetFavoriteColor extends Application{
         yellowBtn.setStyle("-fx-font: 30 arial; -fx-base: #ffff00;");
 
 
+        //Create a pane to add the buttons
         GridPane pane = new GridPane();
         pane.setPadding(new Insets(10));
         pane.setVgap(10);
         pane.setHgap(10);
 
+        //Add the buttons to the pane
         pane.add(blackBtn,0,0);
         pane.add(blueBtn,1,0);
         pane.add(cyanButton,2,0);
@@ -210,6 +237,7 @@ public class PetFavoriteColor extends Application{
         pane.add(whiteBtn,2,3);
         pane.add(yellowBtn,1,4);
 
+        //Show the window w/ buttons
         Scene scene1 = new Scene(pane);
         Stage stage1 = new Stage();
         stage1.setTitle("Buttons");
@@ -217,100 +245,109 @@ public class PetFavoriteColor extends Application{
         stage1.show();
 
 
-        Color[] colors = { Color.BLACK, Color.BLUE,
-                Color.CYAN, Color.DARK_GRAY, Color.GRAY,
-                Color.GREEN,Color.LIGHT_GRAY, Color.MAGENTA,
-                Color.ORANGE, Color.PINK, Color.RED,
-                Color.WHITE, Color.YELLOW };
-
-        ArrayList<Pet> pets = getPets();
-        Map<Color, HashSet<Pet>> m = getMap(colors, pets);
-
+        //Initial Table
+        data = FXCollections.observableArrayList(m.get(Color.BLACK));
+        textColor = "#000000";
         setUpTableColumn(table);
+        table.setItems(data);
+
+
+        //Provide functionality for the buttons:
         blackBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.BLACK));
+            textColor = "#000000";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         blueBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.BLUE));
+            textColor = "#0e2bee";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         cyanButton.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.CYAN));
+            textColor = "#0ac8ee";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         darkGreyBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.DARK_GRAY));
+            textColor = "#999999";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         greyBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.GRAY));
+            textColor = "#808080";
             table.setItems(data);
-
         });
 
         greenBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.GREEN));
+            textColor = "#259905";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         lightGreyBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.LIGHT_GRAY));
+            textColor = "#77807e";
             table.setItems(data);
-
         });
 
         magentaBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.MAGENTA));
+            textColor = "#ff00ff";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         orangeBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.ORANGE));
+            textColor = "#ffa500";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         pinkBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.PINK));
+            textColor = "#ff69b4";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         redBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.RED));
+            textColor = "#ee2211";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         whiteBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.WHITE));
+            textColor = "#000000"; //e9eeec
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
         yellowBtn.setOnAction(event -> {
             data = FXCollections.observableArrayList(m.get(Color.YELLOW));
+            textColor = "#ffff00";
+            setUpTableColumn(table);
             table.setItems(data);
-
         });
 
-        javafx.scene.control.ScrollPane sp = new ScrollPane();
+        //Add table to primary window and show it
+        ScrollPane sp = new ScrollPane();
         sp.setContent(table);
         Scene scene = new Scene(sp, 580, 415);
         primaryStage.setTitle("Pet");
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 }

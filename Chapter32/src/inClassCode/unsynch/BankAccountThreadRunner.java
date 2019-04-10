@@ -1,4 +1,5 @@
-package unsynch;
+package inClassCode.unsynch;
+
 /**
    This program runs threads that deposit and withdraw
    money from the same bank account. 
@@ -9,8 +10,8 @@ public class BankAccountThreadRunner
    {
       BankAccount account = new BankAccount();
       final double AMOUNT = 100;
-      final int REPETITIONS = 100;
-      final int THREADS = 100;
+      final int REPETITIONS = 1000;
+      final int THREADS = 1000;
 
       for (int i = 1; i <= THREADS; i++)
       {

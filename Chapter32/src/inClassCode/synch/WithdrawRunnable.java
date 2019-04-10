@@ -1,4 +1,4 @@
-package synch;
+package inClassCode.synch;
 /**
    A withdraw runnable makes periodic withdrawals from a bank account.
 */

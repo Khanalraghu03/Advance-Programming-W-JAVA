@@ -10,7 +10,7 @@ import java.util.TreeSet;
 
 
 /**Class: GenerateDataForPets
- * @author Evelyn Brannock
+ * @author Raghu Khanal
  * @version 1.0
  * Course : ITEC 3150 Spring 2019
  * Written: Mar 19, 2019

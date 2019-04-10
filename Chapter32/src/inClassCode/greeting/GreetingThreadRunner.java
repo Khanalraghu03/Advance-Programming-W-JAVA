@@ -1,4 +1,4 @@
-package greeting;
+package inClassCode.greeting;
 /**
    This program runs two greeting threads in parallel.
 */

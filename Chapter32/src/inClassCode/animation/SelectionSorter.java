@@ -1,4 +1,4 @@
-package animation;
+package inClassCode.animation;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Line2D;
@@ -138,4 +138,5 @@ public class SelectionSorter
       component.repaint();
       Thread.sleep(steps * DELAY);
    }
-}
+
+}

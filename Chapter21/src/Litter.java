@@ -1,5 +1,5 @@
  /** Class : Litter
- * @author ITEC 3150
+ * @author Raghu Khanal
  * @version 1.0
  * Course: ITEC 2250 Spring 2019
  * Written: February 9, 2019

@@ -1,4 +1,4 @@
-package synch;
+package inClassCode.synch;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -48,14 +48,15 @@ public class BankAccount
       Withdraws money from the bank account.
       @param amount the amount to withdraw
    */
-   public void withdraw(double amount)
-         throws InterruptedException
+   public void withdraw(double amount) throws InterruptedException
    {
       balanceChangeLock.lock();
       try
       {
          while (balance < amount)
+         {
             sufficientFundsCondition.await();
+         }
          System.out.print("Withdrawing " + amount);
          double newBalance = balance - amount;
          System.out.println(", new balance is " + newBalance);

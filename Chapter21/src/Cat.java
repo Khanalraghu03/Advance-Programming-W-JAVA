@@ -1,5 +1,5 @@
 /**Program: Cat
- * @author: ITEC 3150
+ * @author: Raghu Khanal
  * @version 1.0
  * Course: ITEC 3150-01
  * Written: Feb 10, 2019

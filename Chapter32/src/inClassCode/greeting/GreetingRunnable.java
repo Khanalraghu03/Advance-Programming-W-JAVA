@@ -1,4 +1,4 @@
-package greeting;
+package inClassCode.greeting;
 import java.util.Date;
 
 /**

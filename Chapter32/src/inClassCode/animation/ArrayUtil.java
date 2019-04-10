@@ -1,4 +1,4 @@
-package animation;
+package inClassCode.animation;
 import java.util.Random;
 
 /**

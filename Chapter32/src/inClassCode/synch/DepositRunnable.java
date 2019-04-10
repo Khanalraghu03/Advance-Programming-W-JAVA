@@ -1,4 +1,4 @@
-package synch;
+package inClassCode.synch;
 /**
    A deposit runnable makes periodic deposits to a bank account.
 */

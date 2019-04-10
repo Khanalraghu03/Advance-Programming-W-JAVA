@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**Program: Pet
- * @author : ITEC 3150
+ * @author : Raghu Khanal
  * @version 2.0
  * Course: ITEC 3150-01
  * Written: Feb 10, 2019

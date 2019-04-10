@@ -48,6 +48,7 @@ public class FlashText extends Application
                 }
                 catch (InterruptedException ex)
                 {
+
                 }
             }
         }).start();

@@ -1,4 +1,4 @@
-package synch;
+package inClassCode.synch;
 /**
    This program runs threads that deposit and withdraw
    money from the same bank account. 

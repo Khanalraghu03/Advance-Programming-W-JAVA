@@ -1,5 +1,5 @@
  /** Class:Dog
- *@ author ITEC 3150
+ *@ author Raghu Khanal
  * version 1.0
  * Course: ITEC 3150 Spring 2019
  * Written: February 24, 2019

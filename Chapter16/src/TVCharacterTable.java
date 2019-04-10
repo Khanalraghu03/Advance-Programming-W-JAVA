@@ -50,7 +50,7 @@ public class TVCharacterTable extends Application {
 
     //Get every character's attributes and store it as ArrayList of TV Characters and return it
     public ArrayList<TVCharacter> getTVCharacters() {
-        File file = new File("./src/TVCharacter.txt");
+        File file = new File("./Chapter16/src/TVCharacter.txt");
         Scanner output = null;
         String line = null;
         String[] lineContents;
