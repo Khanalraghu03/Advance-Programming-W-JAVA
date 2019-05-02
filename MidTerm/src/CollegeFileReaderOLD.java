@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CollegeFileReader {
+public class CollegeFileReaderOLD {
     public static void main(String[] args) {
         File file = new File("./src/College.txt");
         Scanner output;
@@ -41,9 +41,9 @@ public class CollegeFileReader {
                    
 
                 }
-				studentName.addCourse(course);
-                    stu.setCourseAL(new ArrayList<Course>());
-                    System.out.println(stu.toString());
+//				studentName.addCourse(course);
+//                    stu.setCourseAL(new ArrayList<Course>());
+//                    System.out.println(stu.toString());
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }

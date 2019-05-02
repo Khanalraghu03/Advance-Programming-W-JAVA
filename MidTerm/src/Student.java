@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-/**Class: midterm.Student
+/**Class: Student
  * @author ITEC 3150
  * @version 1.0
  * midterm.Course : ITEC 3150 Spring 2019
@@ -42,6 +42,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "midterm.Student " + name + ", is taking " + courseAL;
+        return "Student " + name + ", is taking " + courseAL;
     }
 }

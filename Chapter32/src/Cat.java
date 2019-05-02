@@ -71,7 +71,4 @@ public class Cat extends Pet
 		return "Cat [super = "+super.toString() + "litterType=" + litterType + "]";
 	}
 
-
-
-
 }

@@ -9,11 +9,15 @@
       <module fileurl="file://$PROJECT_DIR$/Chapter21/Chapter21.iml" filepath="$PROJECT_DIR$/Chapter21/Chapter21.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter25/Chapter25.iml" filepath="$PROJECT_DIR$/Chapter25/Chapter25.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter32/Chapter32.iml" filepath="$PROJECT_DIR$/Chapter32/Chapter32.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FinalExam/FinalExam.iml" filepath="$PROJECT_DIR$/FinalExam/FinalExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FinalExamPractice/FinalExamPractice.iml" filepath="$PROJECT_DIR$/FinalExamPractice/FinalExamPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HeapsOfFun/HeapsOfFun.iml" filepath="$PROJECT_DIR$/HeapsOfFun/HeapsOfFun.iml" />
       <module fileurl="file://$PROJECT_DIR$/ITEC3150.iml" filepath="$PROJECT_DIR$/ITEC3150.iml" />
       <module fileurl="file://$PROJECT_DIR$/MidTerm/MidTerm.iml" filepath="$PROJECT_DIR$/MidTerm/MidTerm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Operating System/Operating System.iml" filepath="$PROJECT_DIR$/Operating System/Operating System.iml" />
       <module fileurl="file://$PROJECT_DIR$/Review/Review.iml" filepath="$PROJECT_DIR$/Review/Review.iml" />
       <module fileurl="file://$PROJECT_DIR$/Scratch/Scratch.iml" filepath="$PROJECT_DIR$/Scratch/Scratch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/String/String.iml" filepath="$PROJECT_DIR$/String/String.iml" />
     </modules>
   </component>
 </project>

@@ -23,23 +23,26 @@ public class RemoveToysRunnable implements Runnable
       Constructs the RemoveToysRunnable 
       Sets the pet with a no toys and count.
       @param aPet the pet that the remove toys is going to consume from
-      @param //count the number of times that remive toys is going to consume
+      @param //count the number of times that remove toys is going to consume
 	 */
 	public RemoveToysRunnable(Pet aPet, int aCount)
 	{
 		count = aCount;
 		pet = aPet;
 	}
+
 	public void run()
 	{
-//		try
-//		{
-//			for (...)
-//			{
-//				pet.removeToy();
-//				Thread.sleep(DELAY);
-//			}
-//		}
-//		catch (InterruptedException exception) {}
+		try
+		{
+			for (int i = 0; i < count; i++)
+			{
+				pet.removeToy();
+				Thread.sleep(DELAY);
+			}
+		}
+		catch (InterruptedException exception) {
+			System.out.println("Error in RemoveToysRunnable");
+		}
 	}
 }

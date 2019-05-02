@@ -69,8 +69,6 @@ public class Dog extends Pet
 	{
 		this.size = size;
 	}
-	
-	
 
 	/**
 	 * @return the tail

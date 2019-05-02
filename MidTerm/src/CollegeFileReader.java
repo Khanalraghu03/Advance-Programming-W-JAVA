@@ -4,84 +4,42 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CollegeFileReader {
+
     public static void main(String[] args) {
-        File file = new File("./src/midterm/College.txt");
+        File file = new File("MidTerm/src/College.txt");
         Scanner output;
-        String line = null;
-//        String[] nameWColon;
-        String[] couseWComma;
-        ArrayList<String> studentName = new ArrayList<>();
-        String courseName = null;
-        String sectionNumber = null;
-
-        String section = null;
-        ArrayList<Course> arrayCourse = new ArrayList<>();
-        ArrayList<ArrayList<Course>> allCourse = new ArrayList<>();
-//        Course course = null;
-        Student s = null;
-        String name;
-
         try {
             output = new Scanner(file);
+            String line = output.nextLine();
+            ArrayList<Course> courses = new ArrayList<>();
+            Student s = null;
+            line = line.replace(":", "");
+            s = new Student(line);
+
             while (output.hasNextLine()) {
                 line = output.nextLine();
-//                String name = line.replace(":","");
-//                s = new Student(name);
-//                System.out.println(s);
-                if (line.contains(":")) {
-
-//                    s = new Student(line.replace(":", ""));
-//                    nameWColon = line.split(":");
-//                    studentName.add(nameWColon[0]);
-//                    studentName.add(line.replace(":", ""));
-                    name = line.replace(":", "");
-                    System.out.println(name);
-                    s = new Student(name);
-//                    System.out.println(s.toString());
-//                    System.out.println(s);
-                    //create a student
-                } else {
-                    //create a course
-                    couseWComma = line.split(",");
-                    courseName = couseWComma[0];
-                    sectionNumber = couseWComma[1];
-                    section = couseWComma[2];
-                    Course course = new Course(courseName, sectionNumber, section);
-//                    arrayCourse.add(course);
-                    s.addCourse(course);
-
-//                    System.out.println(s.toString());
+                if(line.contains(":")) {
+                    System.out.println(s.toString());
+                    courses.clear();
+                    line = line.replace(":", "");
+                    s = new Student(line);
+                }
+                else if(line.contains(",")){
+                    String[] lineContent = line.split(", ");
+                    Course c = new Course(lineContent[0], lineContent[1], lineContent[2]);
+                    courses.add(c);
 
                 }
-
-
-
-//                String s = new Student()
-//                s.getCourseAL();
-                System.out.println(s.toString());
-//                System.out.println(s);
+                s.setCourseAL(courses);
             }
 
-
-//            System.out.println(s.toString());
-
-//            System.out.println(s);
-
-
-
-//            for (String k : studentName) {
-//                Student stu = new Student(k);
-////                stu.setCourseAL(arrayCourse);
-//                System.out.println(stu.toString());
-//            }
+            System.out.println(s.toString());
 
         }
 
-
-         catch (FileNotFoundException e) {
+        catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
 
     }
 

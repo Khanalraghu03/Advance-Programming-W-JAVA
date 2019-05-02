@@ -34,14 +34,17 @@ public class AddToysRunnable implements Runnable
 
 	public void run()
 	{
-//		try
-//		{
-//			for (...)
-//			{
-//				pet.addToy();
-//				Thread.sleep(DELAY);
-//			}
-//		}
-//		catch (InterruptedException exception) {}
+		try
+		{
+			for (int i = 0; i < count; i++)
+			{
+				pet.addToy();
+				Thread.sleep(DELAY);
+			}
+		}
+		catch (InterruptedException exception)
+		{
+
+		}
 	}
 }

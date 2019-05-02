@@ -56,9 +56,9 @@ public class SoutheasternStates extends Application {
 //                        int num = comboBoxStates.getSelectionModel().getSelectedIndex();
 //                        labelCapital.setText("The capital is " + stateCapitals[num]);
 
-                        for(int i = 0; i<states.length;i++) {
+                        for(int i = 0; i < states.length; i++) {
                             if(states[i].equals(comboBoxStates.getValue())) {
-                                labelCapital.setText(stateCapitals[i]);
+                                labelCapital.setText("The capital is "+ stateCapitals[i]);
                             }
                         }
                         //and according to the state chosen will display the correct capital

@@ -1,5 +1,8 @@
 
 import java.util.ArrayList;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author: Raghu Khanal
  * @assign #: 7
@@ -26,6 +29,9 @@ public class Pet implements Comparable<Pet>
 	protected int numberOfLegs;
 	protected int weight;
 	protected int numberOfToys;
+	private Lock petLock = new ReentrantLock();
+	private Condition toyFull = petLock.newCondition();
+	private Condition toyEmpty = petLock.newCondition();
 
 	/**
 	 * Zero argument Constructor
@@ -160,24 +166,63 @@ public class Pet implements Comparable<Pet>
 	/**
 	 * Add another toy for the Pet
 	 */
+
 	public void addToy()
 	{
+		petLock.lock();
+
 		try {
-			this.numberOfToys++;
-			System.out.println("Adding: Toy from pet " + this);
+
+			while(numberOfToys == 5) {
+				toyFull.await();
+			}
+
+			while(numberOfToys < 5) {
+				System.out.println("Adding: Toy from pet " + this + "\n");
+				this.numberOfToys++;
+
+			}
+			toyEmpty.signalAll();
+			System.out.println();
 		}
+
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		finally {
+			petLock.unlock();
+		}
+
 	}
 
 	/**
 	 * Remove a toy from the Pet - meanie
 	 */
-	public synchronized void removeToy()
-	{		
-		this.numberOfToys--;
-		System.out.println("Removing: Toy from pet " + this);			
+	public void removeToy()
+	{
+		petLock.lock();
+
+		try {
+			while (numberOfToys <= 0) {
+				toyEmpty.await();
+			}
+			while(numberOfToys > 0) {
+				System.out.println("Removing: Toy from pet " + this + "\n");
+				this.numberOfToys--;
+
+			}
+
+			toyFull.signalAll();
+			System.out.println();
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			petLock.unlock();
+		}
+
 	}
 
 	@Override
@@ -193,7 +238,8 @@ public class Pet implements Comparable<Pet>
 		int compareWeight = ((Pet) comparePet).getWeight();
 
 		//ascending order
-		return this.weight - compareWeight;  //subtract the weight of the
+		return this.weight - compareWeight;
+		//subtract the weight of the
 		//explicit parameter from this.weight
 		//will be negative if this weight < comparePet weight 
 		//will be 0 if weights are the same
@@ -217,7 +263,7 @@ public class Pet implements Comparable<Pet>
 		int total = 0;
 		for (Pet p : p1)
 		{
-			total +=p.numberOfLegs;
+			total += p.numberOfLegs;
 		}
 		return total;
 	}

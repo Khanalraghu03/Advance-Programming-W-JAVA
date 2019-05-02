@@ -1,4 +1,4 @@
-/**Class: midterm.Course
+/**Class: Course
  * @author ITEC 3150
  * @version 1.0
  * midterm.Course : ITEC 3150 Spring 2019
@@ -46,6 +46,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return "midterm.Course " + discipline + number + "-" + section;
+        return "Course " + discipline + number + "-" + section;
     }
 }
