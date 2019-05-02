@@ -25,7 +25,6 @@ public class GradeTester {
         Grade g9 = new Grade("C+");
         Grade g10 = new Grade("A+");
 
-
         BinarySearchTree b = new BinarySearchTree();
         b.add(g1);
         b.add(g2);
