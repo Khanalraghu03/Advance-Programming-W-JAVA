@@ -47,43 +47,52 @@ public class Grade implements Comparable<Grade>
 		String grade = getLetterGrade();
 		String compareGrade = g.getLetterGrade();
 
+
 		//I am sure there is a better way to do this, but this is what I could come up with---
 
-		//A comma is less than a plus but greater than -
+		//If it is just one letter grade, add a comma to it
+			//so that it is sorted as: "letter+", "letter," and "letter-"
 		if(grade.length() == 1) {
 			grade += ",";
 		}
+
 		if(compareGrade.length() == 1) {
 			compareGrade += ",";
 		}
 
-		//Print A+ after F
-		if(grade.equals("A+")) {
-			grade = "F--";
-		}
-		if(compareGrade.equals("A+")) {
-			compareGrade = "F--";
-		}
-
-		//Print F+ after A+
-		if(grade.equals("F+")) {
-			grade = "F---";
-		}
-		if(compareGrade.equals("F+")) {
-			compareGrade = "F---";
-		}
-
-
-		//Print F- after F+
-		if(grade.equals("F-")) {
-			grade = "F----";
-		}
-		if(compareGrade.equals("F-")) {
-			compareGrade = "F----";
+		//If the grade is A+ then it should show before F+: A+ is not valid grade
+		//if the grade is F+, it should show after A+
+		//if the grade is F-, it should show after F+
+		//Everything else is should do it's normal operation
+		switch(grade) {
+			case "A+":
+				grade = "F-+";
+				break;
+			case "F+":
+				grade = "F-,";
+				break;
+			case "F-":
+				grade = "F--";
+				break;
+			default:
+				break;
 		}
 
+		switch(compareGrade) {
+			case "A+":
+				compareGrade = "F-+";
+				break;
+			case "F+":
+				compareGrade = "F-,";
+				break;
+			case "F-":
+				compareGrade = "F--";
+				break;
+			default:
+				break;
+		}
 
-		int num = grade.compareTo(compareGrade);
+
 		return grade.compareTo(compareGrade);
 	}
 

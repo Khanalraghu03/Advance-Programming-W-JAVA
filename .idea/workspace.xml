@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1063d24a-4362-40bb-825c-5503de33644a" name="Default Changelist" comment="Added some more classes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalExam/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/FinalExam/src/Grade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FinalExam/src/GradeTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/FinalExam/src/GradeTester.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,14 +29,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FinalExam/src/MessageTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="198">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FinalExam/src/GradeTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FinalExam/src/Grade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-305">
+              <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -138,10 +158,10 @@
         <option value="$PROJECT_DIR$/FinalExam/src/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/FinalExam/src/Node.java" />
         <option value="$PROJECT_DIR$/FinalExam/src/BruteForce.java" />
-        <option value="$PROJECT_DIR$/FinalExam/src/Grade.java" />
         <option value="$PROJECT_DIR$/FinalExam/src/MessageTester.java" />
         <option value="$PROJECT_DIR$/FinalExam/src/Level.java" />
         <option value="$PROJECT_DIR$/FinalExam/src/GradeTester.java" />
+        <option value="$PROJECT_DIR$/FinalExam/src/Grade.java" />
       </list>
     </option>
   </component>
@@ -164,6 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,64 +195,12 @@
             <path>
               <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
               <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter25" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter25" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter25" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="inClassCode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
               <item name="FinalExam" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
               <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
               <item name="FinalExam" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="FinalExamPractice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="FinalExamPractice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="FinalExamPractice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="otherSolution" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="String" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ITEC3150" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ITEC3150" type="462c0819:PsiDirectoryNode" />
-              <item name="String" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -239,13 +208,12 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556830853404" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556928848214" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -286,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MessageTester">
+  <component name="RunManager" selected="Application.GradeTester">
     <configuration name="BruteForce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BruteForce" />
       <module name="FinalExam" />
@@ -324,9 +292,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GradeTester" />
         <item itemvalue="Application.MessageTester" />
         <item itemvalue="Application.BruteForce" />
-        <item itemvalue="Application.GradeTester" />
         <item itemvalue="Application.StudentTester (1)" />
         <item itemvalue="Application.Palindrome" />
       </list>
@@ -411,7 +379,8 @@
       <workItem from="1556731828543" duration="1062000" />
       <workItem from="1556734723984" duration="13660000" />
       <workItem from="1556817631066" duration="1119000" />
-      <workItem from="1556830596114" duration="256000" />
+      <workItem from="1556830596114" duration="977000" />
+      <workItem from="1556917077938" duration="2473000" />
     </task>
     <task id="LOCAL-00001" summary="Added some more classes">
       <created>1549509607878</created>
@@ -431,7 +400,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="435195000" />
+    <option name="totallyTimeSpent" value="438389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +415,7 @@
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49827588" visible="true" weight="0.1491409" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49827588" visible="true" weight="0.1491409" />
       <window_info id="Structure" order="1" sideWeight="0.5017241" side_tool="true" weight="0.19931272" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -457,7 +426,7 @@
       <window_info anchor="bottom" id="Duplicate detector" order="1" weight="0.32977462" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3262159" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.400949" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.29893237" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.2550415" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -839,20 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FinalExam/src/GradeTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FinalExam/src/Grade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FinalExam/src/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -862,11 +817,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FinalExam/src/MessageTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalExam/src/GradeTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalExam/src/Grade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305">
+          <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
         </state>
       </provider>
     </entry>

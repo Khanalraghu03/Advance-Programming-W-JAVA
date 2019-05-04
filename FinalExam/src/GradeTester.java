@@ -20,10 +20,10 @@ public class GradeTester {
         Grade g4 = new Grade("A-");
         Grade g5 = new Grade("F+");
         Grade g6 = new Grade("J");
-        Grade g7 = new Grade("C-");
+        Grade g7 = new Grade("F");
         Grade g8 = new Grade("F-");
-        Grade g9 = new Grade("C+");
-        Grade g10 = new Grade("A+");
+        Grade g9 = new Grade("A+");
+        Grade g10 = new Grade("K");
 
         BinarySearchTree b = new BinarySearchTree();
         b.add(g1);
